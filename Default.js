@@ -10,11 +10,7 @@ import AllAlbums from "./Model/AllAlbums-schema.js";
 
 const DefaultData=async()=>{
     try {
-           await PartySong.deleteMany();
-        await Product.deleteMany();
-        await Search.deleteMany();
-        await Artist.deleteMany(); 
-        await AllAlbums.deleteMany();  
+         
         await Product.insertMany(LatestSongs);
         await PartySong.insertMany(PartySongs);
         await Search.insertMany(SearchDatas);

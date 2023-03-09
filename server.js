@@ -16,9 +16,7 @@ const USERNAME = process.env.DB_USERNAME;
 const PASSWORD = process.env.DB_PASSWORD;
 const URL = process.env.MONGODB_URI || `mongodb+srv://${USERNAME}:${PASSWORD}@testproject.cotq4qt.mongodb.net/?retryWrites=true&w=majority`
 Connection(URL);
-if (process.env.NODE_ENV === 'production') {
-    app.use(express.static('client/build'))
-}
+
 app.listen(PORT, () => console.log(`server run successfully at${PORT}`)
 );
 DefaultData();
